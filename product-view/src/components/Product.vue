@@ -30,7 +30,11 @@ export default defineComponent({
     name: 'Product3D',
     mounted(){
         const canvas = document.querySelector("canvas") as HTMLCanvasElement;
-        new Product3D(canvas);
+        let product = new Product3D(canvas);
+
+        window.addEventListener("resize", function() {
+          product.WindowsResize();
+        })
     }
 })
 </script>

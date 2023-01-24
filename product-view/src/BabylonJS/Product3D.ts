@@ -31,6 +31,11 @@ export class Product3D {
         this.engine.runRenderLoop(() => {
             this.scene.render();
         });
+
+    }
+
+    WindowsResize(): void {
+        this.engine.resize();
     }
 
     CreateScene(): Scene {
